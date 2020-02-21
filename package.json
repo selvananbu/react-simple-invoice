@@ -1,0 +1,40 @@
+{
+  "homepage": "http://selvananbu.github.io/greencommunication",
+  "name": "react-simple-invoice-dev",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "jspdf": "^1.5.3",
+    "jspdf-autotable": "^3.2.13",
+    "node-sass": "^4.10.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-beautiful-dnd": "^11.0.4",
+    "react-dom": "^16.6.3",
+    "react-icons": "^3.2.2",
+    "react-scripts": "3.0.1",
+    "react-to-pdf": "0.0.10",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "uuid": "^3.3.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
