@@ -21,6 +21,7 @@ class Invoice extends Component {
     quotation:'',
     typeinvoice:'Quotation',
     customerRef:'',
+    typepayment:'100% Cash on delivery',
     date:new Date().toISOString().substring(0, 10),
     taxRate: 5.00,
     isTaxEnabled:false,
@@ -50,44 +51,50 @@ class Invoice extends Component {
     
     pdf.setFontType("bold");
     pdf.setFontSize(12);
-    pdf.text(self.state.customerName,15,70)
-    pdf.text(this.state.customerAddress,15,75)
-    pdf.text(this.state.customerMobile,15,80)
+    pdf.text(self.state.customerName,15,55)
     pdf.setFontType("normal");
+    pdf.text(this.state.customerAddress,15,60)
+
+    pdf.setFontType("bold");
+    pdf.text("Quotation No : "+self.state.quotation,pdf.internal.pageSize.getWidth()-75,55)
+    pdf.text("Date : "+self.state.date,pdf.internal.pageSize.getWidth()-57,60)
 
     pdf.line(15,82,pdf.internal.pageSize.getWidth()-10,82)
     pdf.setFontType("bold");
     pdf.setFontSize(18);
-    pdf.text(this.state.typeinvoice,pdf.internal.pageSize.getWidth()-45,90)
+    pdf.text(this.state.typeinvoice,15,90)
     pdf.setFontType("normal");
     pdf.line(15,95,pdf.internal.pageSize.getWidth()-10,95);
+
+
 
     var body = [];
     var rowData = [];
 
+    
     rowData.push({ content: "Address" });
     rowData.push({ content: this.state.quotation });
     rowData.push({ content: this.state.date});
     rowData.push({ content: this.state.customerRef});
 
-    body.push(rowData);
+    // body.push(rowData);
 
     
 
-    pdf.autoTable({ 
-      theme:"grid",
-      head: [['Deliver To','Quotation No','Date','Your Ref.']],
-      body:body,
-      styles: {
-          halign: 'center'
-      },
-      margin: {top: 100 }})
+    // pdf.autoTable({ 
+    //   theme:"grid",
+    //   head: [['Deliver To','Quotation No','Date','Your Ref.']],
+    //   body:body,
+    //   styles: {
+    //       halign: 'center'
+    //   },
+    //   margin: {top: 100 }})
 
      
 
     body = [];
     
-    var x = 150;
+    var x = 100;
 
 
    
@@ -111,19 +118,20 @@ class Invoice extends Component {
     
 
     pdf.autoTable({ 
-      theme:"grid",
-      head: [['Code','Description','Extra','Qty','Price/Unit','Total']],
+      headStyles: { fillColor: [134,194,73] },
+      head: [['S.No','Model','Description','Qty','Price/Unit','Total']],
       body:body,
       styles: {
-          halign: 'center'
+          halign: 'center',
+          backgroundColor:"red"
       },
       columnStyles: {0: {cellWidth:'500'}},
-      margin: {top: 200 }})
+      margin: {top: 110 }})
     }
 
-    pdf.line(15,x,pdf.internal.pageSize.getWidth()-10,x);
+    // pdf.line(15,x,pdf.internal.pageSize.getWidth()-10,x);
 
-    x = x + 5;
+    x = x + 50;
 
     
     pdf.setFontType("bold");
@@ -135,7 +143,7 @@ class Invoice extends Component {
     x = x + 7;
 
     pdf.setFontType("normal");
-    pdf.text("Tax " + self.state.taxRate +"%",pdf.internal.pageSize.getWidth()-60,x)
+    pdf.text("VAT " + self.state.taxRate +"%",pdf.internal.pageSize.getWidth()-60,x)
     pdf.text(self.formatCurrency(self.calcTaxTotal()),pdf.internal.pageSize.getWidth()-35,x)
     x = x + 7;
     }
@@ -158,10 +166,9 @@ class Invoice extends Component {
     pdf.text("Terms & Conditions",15,pdf.internal.pageSize.getHeight()-50)
     pdf.text("Warranty   :  The system shall be under warranty for 1 year from the date of delivery during the warranty period",15,pdf.internal.pageSize.getHeight()-45)
     pdf.text("Order Placement: Purchase Order to be Made in favor of 'Green Apple Communication Networks LLC'",15,pdf.internal.pageSize.getHeight()-40)
-    pdf.text("Payment: 100% Cash on delivery",15,pdf.internal.pageSize.getHeight()-35)
-    pdf.text("Tax Registration Number   :    100318659800003",15,pdf.internal.pageSize.getHeight()-30)
-    pdf.text("In case of any further query , Please feel free to Contact us.",15,pdf.internal.pageSize.getHeight()-25)
-    pdf.text("For Green Apple Communication Networks LLC",15,pdf.internal.pageSize.getHeight()-20)
+    pdf.text("Payment: "+this.state.typepayment,15,pdf.internal.pageSize.getHeight()-35)
+    pdf.text("In case of any further query , Please feel free to Contact us.",15,pdf.internal.pageSize.getHeight()-30)
+    pdf.text("For Green Apple Communication Networks LLC",15,pdf.internal.pageSize.getHeight()-25)
    
 
     return pdf;
@@ -279,19 +286,12 @@ class Invoice extends Component {
             <div className={styles.label}>Address</div>
             <div className={styles.value} >  <TextArea placeholder='Address'  onChange={(event) => this.setState({customerAddress:event.target.value})}/></div>
           </div>
-          <div className={styles.row}>
-            <div className={styles.label}>Mobile</div>
-            <div className={`${styles.value} ${styles.date}`}><input type="text" placeholder="+971565656"  onChange={(event) => this.setState({customerMobile:event.target.value})}/></div>
-          </div>
+         
         </div>
       </div>
           <div>
             <div className={`${styles.valueTable} ${styles.to}`}>
-              <div className={styles.row}>
-                <div className={styles.label}>Customer Ref</div>
-                <div className={styles.value}><input type="text" placeholder="customer ref" value={this.state.customerRef}
-                onChange={(event) => this.setState({customerRef:event.target.value})}/></div>
-              </div>
+             
               <div className={styles.row}>
                 <div className={styles.label}><input placeholder="Quotation" style={{border:"0",fontWeight:"bold"}} value={this.state.typeinvoice}
                 onChange={(event) => this.setState({typeinvoice:event.target.value})}
@@ -306,7 +306,7 @@ class Invoice extends Component {
             </div>
           </div>
         </div>
-        <h2>Invoice</h2>
+        <h2>{this.state.typeinvoice}</h2>
 
           <LineItems
             items={this.state.lineItems}
@@ -375,12 +375,13 @@ class Invoice extends Component {
        <strong> Terms & Conditions</strong><br/><br/>
        <strong style={{fontSize:12}}>  Warranty :The system shall be under warranty for 1 year from the date of delivery during the warranty period</strong><br/> 
        <strong style={{fontSize:12}}>    Order Placement: Purchase Order to be Made in favor of "Green Apple Communication Networks LLC"</strong><br/> 
-       <strong style={{fontSize:12}}>    Payment: 100% Cash on delivery</strong><br/> 
-       <strong style={{fontSize:12}}>    Tax Registration Number : 100318659800003</strong><br/> 
+       <strong style={{fontSize:12,display:"flex",flexDirection:"row"}}>    {"Payment: "} 
+       <input className={styles.value} value={ this.state.typepayment} type="text" onChange={(event) => this.setState({typepayment:event.target.value})} onFocus={(event) => this.setState({typepayment:""})}/></strong>
           <strong style={{fontSize:12}}>    In case of any further query , Please feel free to Contact us.</strong><br/> 
           <strong style={{fontSize:12}}>    For Green Apple Communication Networks LLC</strong><br/> 
         </div>
       </div>
+    
       </div>
       
     )
