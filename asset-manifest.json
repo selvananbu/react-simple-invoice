@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/greencommunication/static/css/main.72473faa.chunk.css",
-    "main.js": "/greencommunication/static/js/main.8b85c511.chunk.js",
-    "main.js.map": "/greencommunication/static/js/main.8b85c511.chunk.js.map",
-    "runtime~main.js": "/greencommunication/static/js/runtime~main.4d674c82.js",
-    "runtime~main.js.map": "/greencommunication/static/js/runtime~main.4d674c82.js.map",
-    "static/css/2.cf674a49.chunk.css": "/greencommunication/static/css/2.cf674a49.chunk.css",
-    "static/js/2.d5be35f7.chunk.js": "/greencommunication/static/js/2.d5be35f7.chunk.js",
-    "static/js/2.d5be35f7.chunk.js.map": "/greencommunication/static/js/2.d5be35f7.chunk.js.map",
-    "index.html": "/greencommunication/index.html",
-    "precache-manifest.c7a77afb8159b9b81fe8949ff19d00f2.js": "/greencommunication/precache-manifest.c7a77afb8159b9b81fe8949ff19d00f2.js",
-    "service-worker.js": "/greencommunication/service-worker.js",
-    "static/css/2.cf674a49.chunk.css.map": "/greencommunication/static/css/2.cf674a49.chunk.css.map",
-    "static/css/main.72473faa.chunk.css.map": "/greencommunication/static/css/main.72473faa.chunk.css.map",
-    "static/media/semantic.min.css": "/greencommunication/static/media/outline-icons.ef60a4f6.woff",
-    "static/media/headerlogo.jpg": "/greencommunication/static/media/headerlogo.9b3e4f7f.jpg"
+    "main.css": "/react-simple-invoice/static/css/main.72473faa.chunk.css",
+    "main.js": "/react-simple-invoice/static/js/main.cf0c91c7.chunk.js",
+    "main.js.map": "/react-simple-invoice/static/js/main.cf0c91c7.chunk.js.map",
+    "runtime~main.js": "/react-simple-invoice/static/js/runtime~main.dfbb4e24.js",
+    "runtime~main.js.map": "/react-simple-invoice/static/js/runtime~main.dfbb4e24.js.map",
+    "static/css/2.97379a7c.chunk.css": "/react-simple-invoice/static/css/2.97379a7c.chunk.css",
+    "static/js/2.d5be35f7.chunk.js": "/react-simple-invoice/static/js/2.d5be35f7.chunk.js",
+    "static/js/2.d5be35f7.chunk.js.map": "/react-simple-invoice/static/js/2.d5be35f7.chunk.js.map",
+    "index.html": "/react-simple-invoice/index.html",
+    "precache-manifest.b284c936919a75317b82981f5602260f.js": "/react-simple-invoice/precache-manifest.b284c936919a75317b82981f5602260f.js",
+    "service-worker.js": "/react-simple-invoice/service-worker.js",
+    "static/css/2.97379a7c.chunk.css.map": "/react-simple-invoice/static/css/2.97379a7c.chunk.css.map",
+    "static/css/main.72473faa.chunk.css.map": "/react-simple-invoice/static/css/main.72473faa.chunk.css.map",
+    "static/media/semantic.min.css": "/react-simple-invoice/static/media/outline-icons.ef60a4f6.woff",
+    "static/media/headerlogo.jpg": "/react-simple-invoice/static/media/headerlogo.9b3e4f7f.jpg"
   }
 }
