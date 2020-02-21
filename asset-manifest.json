@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-simple-invoice/static/css/main.72473faa.chunk.css",
-    "main.js": "/react-simple-invoice/static/js/main.cf0c91c7.chunk.js",
-    "main.js.map": "/react-simple-invoice/static/js/main.cf0c91c7.chunk.js.map",
+    "main.js": "/react-simple-invoice/static/js/main.101e60ff.chunk.js",
+    "main.js.map": "/react-simple-invoice/static/js/main.101e60ff.chunk.js.map",
     "runtime~main.js": "/react-simple-invoice/static/js/runtime~main.dfbb4e24.js",
     "runtime~main.js.map": "/react-simple-invoice/static/js/runtime~main.dfbb4e24.js.map",
     "static/css/2.97379a7c.chunk.css": "/react-simple-invoice/static/css/2.97379a7c.chunk.css",
     "static/js/2.d5be35f7.chunk.js": "/react-simple-invoice/static/js/2.d5be35f7.chunk.js",
     "static/js/2.d5be35f7.chunk.js.map": "/react-simple-invoice/static/js/2.d5be35f7.chunk.js.map",
     "index.html": "/react-simple-invoice/index.html",
-    "precache-manifest.b284c936919a75317b82981f5602260f.js": "/react-simple-invoice/precache-manifest.b284c936919a75317b82981f5602260f.js",
+    "precache-manifest.36b425680754ea97778a3c733baf5150.js": "/react-simple-invoice/precache-manifest.36b425680754ea97778a3c733baf5150.js",
     "service-worker.js": "/react-simple-invoice/service-worker.js",
     "static/css/2.97379a7c.chunk.css.map": "/react-simple-invoice/static/css/2.97379a7c.chunk.css.map",
     "static/css/main.72473faa.chunk.css.map": "/react-simple-invoice/static/css/main.72473faa.chunk.css.map",
