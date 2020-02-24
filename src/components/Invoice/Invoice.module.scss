@@ -8,7 +8,20 @@
   border-radius: $borderRadius;
   background: $bgColor;
 }
-
+@media only screen and (max-width: 600px) {
+.addressheader{
+  // float: right;
+  font-size: 12;
+  margin-top: 20px;
+}
+}
+@media only screen and (min-width: 601px) {
+  .addressheader{
+    float: right;
+    font-size: 12;
+    margin-top: 20px;
+  }
+  }
 .brand {
   margin-bottom: $rhythm * 2;
   .logo {

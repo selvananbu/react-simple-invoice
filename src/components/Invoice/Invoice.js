@@ -5,6 +5,7 @@ import LineItems from './LineItems'
 import uuidv4 from 'uuid/v4'
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
+import Media from 'react-media';
 
 import { Form, TextArea } from 'semantic-ui-react'
 const ref = React.createRef();
@@ -260,13 +261,14 @@ class Invoice extends Component {
   render = () => {
     return (
       <div>
-     
+   
       
         <div className={styles.invoice} ref={ref}>
 
+        
         <div className={styles.brand}>
           <img src={require("../assets/headerlogo.jpg")} alt="Logo" className={styles.logo} />
-          <div style={{float:"right",fontSize:12,marginTop:"20px"}}>
+          <div className={styles.addressheader}>
           Al Mamzar AB Plaza 8 Tower , 10th Floor Unit # 1001<br/>
           P.O.Box: 115423, Dubai, United Arab Emirates<br/>
           Tel: +971 4 8326784,Mbl:+971 55 9881940 
@@ -274,6 +276,7 @@ class Invoice extends Component {
           Tax Registration #: 100318659800003<br/>
           </div>
         </div>
+       
      
         <div className={styles.addresses}>
         <div>
@@ -381,8 +384,8 @@ class Invoice extends Component {
           <strong style={{fontSize:12}}>    For Green Apple Communication Networks LLC</strong><br/> 
         </div>
       </div>
-    
       </div>
+    
       
     )
   }
