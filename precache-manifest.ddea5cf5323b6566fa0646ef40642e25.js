@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "082930d5fb64eb5be8f3fd9f3d119b21",
+    "revision": "788f3b4ad401d3503a301a1959512e08",
     "url": "/react-simple-invoice/index.html"
   },
   {
-    "revision": "e2463d0c3416568ebe74",
-    "url": "/react-simple-invoice/static/css/2.97379a7c.chunk.css"
+    "revision": "a8bb8bab78ee090aef31",
+    "url": "/react-simple-invoice/static/css/2.ac63d129.chunk.css"
   },
   {
-    "revision": "8038a0e14ce3d8cbac45",
-    "url": "/react-simple-invoice/static/css/main.72473faa.chunk.css"
+    "revision": "059d5a5302506c0b5803",
+    "url": "/react-simple-invoice/static/css/main.e2c85c39.chunk.css"
   },
   {
-    "revision": "e2463d0c3416568ebe74",
-    "url": "/react-simple-invoice/static/js/2.d5be35f7.chunk.js"
+    "revision": "a8bb8bab78ee090aef31",
+    "url": "/react-simple-invoice/static/js/2.921e03c1.chunk.js"
   },
   {
-    "revision": "8038a0e14ce3d8cbac45",
-    "url": "/react-simple-invoice/static/js/main.101e60ff.chunk.js"
+    "revision": "059d5a5302506c0b5803",
+    "url": "/react-simple-invoice/static/js/main.6cad9a8b.chunk.js"
   },
   {
     "revision": "2c48a714b0280c8f6845",
